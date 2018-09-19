@@ -1,0 +1,26 @@
+<div class="container">
+    <p>Testing values : {{refForm.value | json}}</p>
+  <form id=formId (ngSubmit)="submit(refForm,error)" #refForm="ngForm">
+    <div>
+        <div class="form-group">
+            <label  for="username" >Username</label>
+            <input type="text" required [(ngModel)]='this.name.user' (input)="onchange(error)" class="form-control" #username='ngModel' name="username">
+          </div>
+          <div class="alert alert-dark" [hidden]="username.valid || username.pristine">
+            Username is required
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" required [(ngModel)]='this.name.pass' (input)="onchange(error)" class="form-control" #password='ngModel' name="password">
+          </div>
+          <div class="alert alert-dark" [hidden]="password.valid || password.pristine">
+            Password is required
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-dark" [disabled]="username.invalid || password.invalid">Login</button>
+            &nbsp; &nbsp; <span id="error" class="alert alert-dark" #error hidden>Login failed, check credentials</span>
+          </div>
+          <h6>* Use ' admin ' for both username and password to login</h6>
+    </div>
+  </form>
+</div>
