@@ -1,9 +1,11 @@
 <p class="h2">
   Userlist
 </p>
-<ul>
-  <li *ngFor='let user of alluser' class="alert alert-dark">
-    <p class="b">ID : {{user.id}}</p>
+
+<app-userlist *ngFor='let user of alluser' [child]='user'></app-userlist>
+
+  <!-- <li *ngFor='let user of alluser' class="alert alert-dark"> -->
+    <!-- <p class="b">ID : {{user.id}}</p>
     <p class="b">Username : {{user.name}}</p>
     <p class="b">Email : {{user.email}}</p>
     <p class="b"> Address : </p>
@@ -13,8 +15,6 @@
       <li appAddressdir>Suite : {{user.address.suite}}</li>
       <li appAddressdir>Zipcode : {{user.address.zipcode}}</li>
     </ul>
-    <br/>
-  </li>
-</ul>
+    <br/> -->
 <br/>
 <button type="button" class="btn btn-dark" (click)="goback()">Back to login</button>

@@ -30,9 +30,12 @@ export class UserlistService {
   }
 
 
-  userurl='https://jsonplaceholder.typicode.com/users';
+  userurl='https://jsonplaceholder.typicode.com/users/';
   getalluser():Observable<User[]>{
     return this.http.get<User[]>(this.userurl);
+  }
+  getuserbyid(id):Observable<User>{
+    return this.http.get<User>(this.userurl+id);
   }
   constructor(private http:HttpClient, private rout:Router) {
     this.loggedin();

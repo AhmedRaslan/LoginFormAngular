@@ -9,7 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LeadingComponent } from './leading/leading.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AddressdirDirective } from './addressdir.directive'
+import { AddressdirDirective } from './addressdir.directive';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UserdtlComponent } from './userdtl/userdtl.component'
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { AddressdirDirective } from './addressdir.directive'
     MydirDirective,
     LeadingComponent,
     HomeComponent,
-    AddressdirDirective
+    AddressdirDirective,
+    UserlistComponent,
+    UserdtlComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { AddressdirDirective } from './addressdir.directive'
       {path:'login', component: Day2compComponent},
       {path:'landingpage',component:LeadingComponent},
       {path:'home',component:HomeComponent},
-      {path:'',redirectTo:'/login',pathMatch:'full'}
+      {path:'',redirectTo:'/login',pathMatch:'full'},
+      {path:'userlist/:id',component:UserdtlComponent}
     ])
   ],
   providers: [],

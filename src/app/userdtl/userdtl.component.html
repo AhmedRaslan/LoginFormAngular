@@ -1,0 +1,17 @@
+<p class="h2">
+    {{myuser.name}}'s Details
+  </p>
+    <div  class="alert alert-dark">
+        <p class="b">ID : {{myuser.id}}</p>
+        <p class="b">Username : {{myuser.name}}</p>
+        <p class="b">Email : {{myuser.email}}</p>
+        <p class="b"> Address : </p>
+        <ul>
+          <li appAddressdir>Street : {{myuser.address.street}}</li>
+          <li appAddressdir>City : {{myuser.address.city}}</li>
+          <li appAddressdir>Suite : {{myuser.address.suite}}</li>
+          <li appAddressdir>Zipcode : {{myuser.address.zipcode}}</li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-dark" (click)="goback()">Back to User list</button>
+

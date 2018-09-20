@@ -1,0 +1,20 @@
+li{
+  list-style-type: none;
+  margin-left:-22px;
+}
+a{
+  display: block;
+
+}
+a:hover{
+  border-color: yellow;
+}
+
+p ,button{
+  margin:10px 12px;
+}
+
+.alert-dark{
+  background-color: rgb(17, 17, 17);
+  color: white;
+}

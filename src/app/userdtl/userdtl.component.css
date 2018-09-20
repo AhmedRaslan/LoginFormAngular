@@ -1,0 +1,12 @@
+.alert-dark{
+  background-color: rgb(17, 17, 17);
+  color: white;
+}
+li{
+  list-style-type: none;
+  margin-left:-22px;
+}
+
+p ,button{
+  margin:10px 12px;
+}
