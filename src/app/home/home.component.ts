@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   alluser:User[];
   goback(){
     this.rout.navigate(['/login']);
+    localStorage.removeItem('logged');
   }
   constructor(userserv:UserlistService, private rout:Router) {
     userserv.getalluser().subscribe(myuser=>this.alluser=myuser)
