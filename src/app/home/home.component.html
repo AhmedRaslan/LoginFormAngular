@@ -1,0 +1,20 @@
+<p class="h2">
+  Userlist
+</p>
+<ul>
+  <li *ngFor='let user of alluser' class="alert alert-dark">
+    <p class="b">ID : {{user.id}}</p>
+    <p class="b">Username : {{user.name}}</p>
+    <p class="b">Email : {{user.email}}</p>
+    <p class="b"> Address : </p>
+    <ul>
+      <li appAddressdir>Street : {{user.address.street}}</li>
+      <li appAddressdir>City : {{user.address.city}}</li>
+      <li appAddressdir>Suite : {{user.address.suite}}</li>
+      <li appAddressdir>Zipcode : {{user.address.zipcode}}</li>
+    </ul>
+    <br/>
+  </li>
+</ul>
+<br/>
+<button type="button" class="btn btn-dark" (click)="goback()">Back to login</button>
